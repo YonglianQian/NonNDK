@@ -14,14 +14,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         AppCenter.start(getApplication(), "6fcb5289-d7e5-4ada-a6d8-6154368ab279",
                 Analytics.class, Crashes.class);
-        Analytics.trackEvent("Home page is opened");
-        TextView textview=new TextView(this);
-        textview.setText("version3, ABCD");
-Crashes.generateTestCrash();
-        setContentView(textview);
+
+        Crashes.generateTestCrash();
+        setContentView(R.layout.activity_main);
+
+
     }
 }
