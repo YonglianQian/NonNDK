@@ -20,6 +20,5 @@ TextView tv=new TextView(this);
 tv.setText("Version4, Hello World form backend");
         setContentView(tv);
        Crashes.generateTestCrash();
-
     }
 }
