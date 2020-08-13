@@ -14,13 +14,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AppCenter.start(getApplication(), "6fcb5289-d7e5-4ada-a6d8-6154368ab279",
-                Analytics.class, Crashes.class);
-TextView tv=new TextView(this);
-tv.setText("Version1, Hello World form backend");
+        AppCenter.start(getApplication(), "6fcb5289-d7e5-4ada-a6d8-6154368ab279", Analytics.class, Crashes.class);
 
+TextView tv=new TextView(this);
+tv.setText("Version4, Hello World form backend");
         setContentView(tv);
-       // Crashes.generateTestCrash();
+       Crashes.generateTestCrash();
 
     }
 }
