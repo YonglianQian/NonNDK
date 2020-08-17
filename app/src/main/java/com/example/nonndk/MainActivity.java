@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,11 +23,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         AppCenter.start(getApplication(), "6fcb5289-d7e5-4ada-a6d8-6154368ab279", Analytics.class, Crashes.class);
 AppCenter.setLogLevel(Log.VERBOSE);
-
         setContentView(R.layout.activity_main);
 
     }
     public void sendMessage(View view){
+        SimpleDateFormat sdf=new SimpleDateFormat();
+        sdf.applyPattern("yyyy-MM-dd HH:mm:ss a");
+        Date d=new Date();
+        Analytics.trackEvent("button is clicked at "+sdf.format(d));
 Intent intent=new Intent(this,DisplayMessageActivity.class);
         EditText editText=(EditText)findViewById(R.id.editText);
         String message=editText.getText().toString();
