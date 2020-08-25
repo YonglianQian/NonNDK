@@ -15,7 +15,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        Crashes.generateTestCrash();
+       // Crashes.generateTestCrash();
 
 
         setContentView(R.layout.activity_display_message);
