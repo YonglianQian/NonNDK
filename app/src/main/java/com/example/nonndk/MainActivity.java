@@ -16,7 +16,7 @@ import com.microsoft.appcenter.distribute.Distribute;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
+//non ndk, only test the AppCenter Crashes feature.
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE="com.example.NonNDK.Message";
@@ -29,6 +29,7 @@ AppCenter.setLogLevel(Log.VERBOSE);
 
     }
     public void sendMessage(View view){
+
         SimpleDateFormat sdf=new SimpleDateFormat();
         sdf.applyPattern("yyyy-MM-dd HH:mm:ss a");
         Date d=new Date();

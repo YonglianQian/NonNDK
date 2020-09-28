@@ -15,8 +15,12 @@ public class DisplayMessageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-       Crashes.generateTestCrash();
-
+       //Crashes.generateTestCrash();
+        try {
+            throw new Exception("My Test Exception");
+        } catch (Exception exception) {
+            Crashes.trackError(exception);
+        }
 
         setContentView(R.layout.activity_display_message);
         // Get the Intent that started this activity and extract the string
