@@ -24,6 +24,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         Analytics.trackEvent("Second page onCreate "+sdf.format(d));
 
        Crashes.generateTestCrash();
+
         try {
             throw new Exception("My Test Exception");
         } catch (Exception exception) {
