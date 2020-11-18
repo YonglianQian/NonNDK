@@ -6,7 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -14,8 +18,12 @@ public class DisplayMessageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        SimpleDateFormat sdf=new SimpleDateFormat();
+        sdf.applyPattern("yyyy-MM-dd HH:mm:ss a");
+        Date d=new Date();
+        Analytics.trackEvent("Second page onCreate "+sdf.format(d));
 
-       //Crashes.generateTestCrash();
+       Crashes.generateTestCrash();
         try {
             throw new Exception("My Test Exception");
         } catch (Exception exception) {
