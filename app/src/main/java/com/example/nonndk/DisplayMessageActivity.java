@@ -17,13 +17,19 @@ public class DisplayMessageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       Crashes.generateTestCrash();
-//        try {
-//            throw new Exception("My Test Exception");
-//        } catch (Exception exception) {
-//            Crashes.trackError(exception);
-//        }
 
+        SimpleDateFormat sdf=new SimpleDateFormat();
+        sdf.applyPattern("yyyy-MM-dd HH:mm:ss a");
+        Date d=new Date();
+        Analytics.trackEvent("Second event"+sdf.format(d));
+
+        Crashes.generateTestCrash();
+
+        try {
+            throw new Exception("My Test Exception");
+        } catch (Exception exception) {
+            Crashes.trackError(exception);
+        }
         setContentView(R.layout.activity_display_message);
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();

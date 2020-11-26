@@ -33,7 +33,7 @@ AppCenter.setLogLevel(Log.VERBOSE);
         SimpleDateFormat sdf=new SimpleDateFormat();
         sdf.applyPattern("yyyy-MM-dd HH:mm:ss a");
         Date d=new Date();
-        Analytics.trackEvent("button is clicked at "+sdf.format(d));
+        Analytics.trackEvent("First event: button is clicked at "+sdf.format(d));
 
 Intent intent=new Intent(this,DisplayMessageActivity.class);
         EditText editText=(EditText)findViewById(R.id.editText);
