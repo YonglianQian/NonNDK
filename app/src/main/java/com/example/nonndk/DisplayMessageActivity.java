@@ -23,7 +23,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         Date d=new Date();
         Analytics.trackEvent("Second event"+sdf.format(d));
 
-        Crashes.generateTestCrash();
+        //Crashes.generateTestCrash();
 
         try {
             throw new Exception("My Test Exception");
