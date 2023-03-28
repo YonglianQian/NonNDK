@@ -5,6 +5,4 @@ Remote repository.
 https://github.com/YonglianQian/NonNDK
 
 Great news!
-fined feature.
-MarkDown syntax supported!
-
+MarkDown syntax supported!( with something better supported)
