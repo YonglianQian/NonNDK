@@ -4,4 +4,4 @@ https://appcenter.ms/orgs/AbrahamOrganization/apps/GitHubAppTest
 Remote repository.
 https://github.com/YonglianQian/NonNDK
 
-Something new!
+exciting news.
