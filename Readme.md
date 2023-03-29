@@ -4,6 +4,4 @@ https://appcenter.ms/orgs/AbrahamOrganization/apps/GitHubAppTest
 Remote repository.
 https://github.com/YonglianQian/NonNDK
 
-Great news!
-MarkDown syntax supported!( with something better supported)
-20230329 iterating
+Win!
